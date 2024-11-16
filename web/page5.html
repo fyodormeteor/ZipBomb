@@ -56,14 +56,28 @@
             transition: background-color 0.3s, border-color 0.3s;
         }
 
+        /* Cambiar el color al seleccionarlo */
         input[type="radio"]:checked + label {
-            background-color: #4CAF50;
+            background-color: #4CAF50; /* Verde por defecto */
             color: white;
             border-color: #4CAF50;
         }
 
         input[type="radio"]:hover + label {
             background-color: #e0e0e0;
+        }
+
+        #shopCredit + label {
+            
+            border: 2px solid #93b1ce;
+            box-shadow: 0 0 5px 3px rgba(178, 179, 253, 0.6);
+        }
+
+        /* Estilo específico para "Shop Credit + Bonus" al seleccionarlo */
+        #shopCredit:checked + label {
+            background-color: #277cb4; /* Azul */
+            color: white;
+            border-color: #277cb4;
         }
 
         button {
@@ -86,7 +100,7 @@
 <body>
 
     <div class="container">
-        <h1>Payback form</h1>
+        <h1>Payback Form</h1>
         
         <form>
             <!-- Campo Return Method -->
@@ -109,7 +123,7 @@
                     <label for="cash">Cash</label>
 
                     <input type="radio" id="shopCredit" name="payMethod" value="shopCredit">
-                    <label for="shopCredit">Shop Credit</label>
+                    <label for="shopCredit">Shop Credit + Bonus</label>
                 </div>
             </div>
 
