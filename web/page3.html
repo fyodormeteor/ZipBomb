@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Devolución de Producto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .other-input {
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Formulario de Devolución de Producto</h1>
+        
+        <form action="#" method="post">
+            <label for="motivo"><strong>Selecciona el motivo de la devolución:</strong></label>
+            <select id="motivo" name="motivo" onchange="mostrarOtroMotivo()">
+                <option value="producto_incorrecto">Producto incorrecto</option>
+                <option value="producto_danado">Producto dañado</option>
+                <option value="descripcion_incorrecta">No describe con la descripción</option>
+                <option value="otro">Otro...</option>
+            </select>
+
+            <!-- Campo de texto para "Otro..." motivo -->
+            <div id="otrosMotivo" class="other-input">
+                <label for="otroMotivo">Escribe el motivo de la devolución:</label>
+                <textarea id="otroMotivo" name="otroMotivo" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script>
+        function mostrarOtroMotivo() {
+            var motivoSeleccionado = document.getElementById('motivo').value;
+            var inputOtro = document.getElementById('otrosMotivo');
+            
+            // Mostrar el campo de texto solo si "Otro..." es seleccionado
+            if (motivoSeleccionado === "otro") {
+                inputOtro.style.display = 'block';
+            } else {
+                inputOtro.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>
