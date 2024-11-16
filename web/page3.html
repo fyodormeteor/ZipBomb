@@ -41,15 +41,17 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #7159f8;
             color: white;
             font-size: 16px;
             cursor: pointer;
             transition: background-color 0.3s;
+            outline: none;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #7eb2ff;
+            box-shadow: 0 0 10px 3px rgba(18, 179, 201, 0.8)
         }
 
         .other-input {
@@ -77,8 +79,10 @@
                 <label for="otroMotivo">Select the motive of your return:</label>
                 <textarea id="otroMotivo" name="otroMotivo" rows="4"></textarea>
             </div>
-
-            <button type="submit">Send</button>
+             
+            <button type="button" onclick="window.location.href='page4.html'"> Send </button>
+            
+            
         </form>
     </div>
 

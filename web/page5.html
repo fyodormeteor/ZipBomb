@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Métodos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .field {
+            margin-bottom: 20px;
+        }
+
+        /* Estilos para los botones de opción */
+        .radio-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        input[type="radio"] {
+            display: none; /* Oculta el botón de opción real */
+        }
+
+        input[type="radio"] + label {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        input[type="radio"]:checked + label {
+            background-color: #4CAF50;
+            color: white;
+            border-color: #4CAF50;
+        }
+
+        input[type="radio"]:hover + label {
+            background-color: #e0e0e0;
+        }
+
+        button {
+            background: linear-gradient(135deg, #7eb2ff, #7159f8);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payback form</h1>
+        
+        <form>
+            <!-- Campo Return Method -->
+            <div class="field">
+                <label><strong>Return Method:</strong></label><br>
+                <div class="radio-buttons">
+                    <input type="radio" id="inShop" name="returnMethod" value="inShop">
+                    <label for="inShop">In Shop</label>
+
+                    <input type="radio" id="fromHome" name="returnMethod" value="fromHome">
+                    <label for="fromHome">From Home</label>
+                </div>
+            </div>
+
+            <!-- Campo Pay Method -->
+            <div class="field">
+                <label><strong>Pay Method:</strong></label><br>
+                <div class="radio-buttons">
+                    <input type="radio" id="cash" name="payMethod" value="cash">
+                    <label for="cash">Cash</label>
+
+                    <input type="radio" id="shopCredit" name="payMethod" value="shopCredit">
+                    <label for="shopCredit">Shop Credit</label>
+                </div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</body>
+</html>
