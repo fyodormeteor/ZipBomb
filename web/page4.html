@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button-primary {
+            background: linear-gradient(135deg, #ff7eb3, #ff758c);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 20px 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 0 20px 4px rgba(255, 117, 140, 0.6);
+            outline: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .button-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px 8px rgba(255, 117, 140, 0.8);
+        }
+
+        .button-secondary {
+            background: #cccccc;
+            color: #666666;
+            border: none;
+            border-radius: 12px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            margin-top: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .button-secondary:hover {
+            background: #bbbbbb;
+        }
+    </style>
+</head>
+<body>
+    <header>Header Text Here</header>
+    <button class="button-primary">Primary Button</button>
+    <button class="button-secondary">Secondary Button</button>
+</body>
+</html>
+
